@@ -1,0 +1,6 @@
+# DiamondBench has NO dependencies. It runs on the Python 3.8+ standard library only.
+#
+#   python bench.py --provider gemini
+#
+# Nothing to pip install. This file exists so that `pip install -r requirements.txt`
+# is a harmless no-op and to make the "stdlib only" promise explicit.

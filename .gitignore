@@ -1,0 +1,23 @@
+# DiamondBench is pure standard-library Python. There are no dependencies to install.
+# This file keeps local runtime noise and any secrets out of version control.
+
+# Secrets: never commit an API key. Keys are read from AssetCreation/.env at runtime.
+.env
+*.env
+.env.*
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Local virtual environments (not needed; stdlib only)
+.venv/
+venv/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# NOTE: results/ is intentionally NOT ignored. Scoreboards are the shareable
+# artifact of this project and are meant to be committed.
