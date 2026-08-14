@@ -87,3 +87,9 @@ scoreboard. A human-readable scoreboard lives in `results/RESULTS-<date>.md`.
 ## License
 
 MIT. See LICENSE. Copyright (c) 2026 Stienhardt & Stones.
+
+## The Stienhardt open-source diamond stack
+
+- [dutch-marquise-spec](https://github.com/JacobiusMakes/dutch-marquise-spec): the open geometry standard. DOI: [10.5281/zenodo.21938900](https://doi.org/10.5281/zenodo.21938900)
+- [DiamondBench](https://github.com/JacobiusMakes/diamondbench): open benchmark of AI answer-engine accuracy on diamond questions
+- [Diamond & Gemology Encyclopedia](https://huggingface.co/datasets/JacobiusMakes/diamond-gemology-encyclopedia): the encyclopedia as a Hugging Face dataset
