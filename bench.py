@@ -209,7 +209,7 @@ NEGATION_MARKERS = [
     "no", "not", "never", "nor", "myth", "false", "falsely", "isn't", "aren't",
     "doesn't", "don't", "won't", "wasn't", "weren't", "didn't", "cannot", "can't",
     "unlike", "rather than", "instead of", "misconception", "contrary", "debunk",
-    "debunked", "legend", "folklore", "without", "despite", "avoid", "skip",
+    "debunked", "legend", "folklore", "without", "despite", "avoid", "skip", "steer clear",
     "whereas", "while", "by contrast", "in contrast", "compared to", "compared with",
     "idea that", "belief that", "story that", "notion that", "worry that",
     "fear that", "no longer", "as opposed to", "versus", "different from",
@@ -268,6 +268,26 @@ def find_wrong_claims(answer, must_not):
     marker). Deterministic; imperfect by design, see METHODOLOGY.md."""
     text_low = answer.lower()
     spans = _sentences_with_spans(text_low)
+    # A bulleted or numbered list item inherits the negation of its lead-in line, so
+    # "Avoid the following:" followed by "* bleach" is a debunk, not an assertion.
+    LIST_ITEM = re.compile(r"^\s*(?:[-*•]|\d+[.)])\s+")
+    # The lead-in is the whole block of prose between the previous list and this one
+    # (a "What to avoid:" heading plus a "steer clear of the following:" line), so
+    # negation accumulates across those lines and resets only after a list ends.
+    negated_span = {}
+    lead_negated = False
+    in_list = False
+    for (s, e) in spans:
+        sentence = text_low[s:e]
+        own = _is_negated(sentence)
+        if LIST_ITEM.match(sentence):
+            negated_span[(s, e)] = own or lead_negated
+            in_list = True
+        else:
+            if sentence.strip():
+                lead_negated = own if in_list else (lead_negated or own)
+                in_list = False
+            negated_span[(s, e)] = own
     hits = []
     for phrase in must_not:
         p = phrase.lower().strip()
@@ -281,7 +301,7 @@ def find_wrong_claims(answer, must_not):
                 break
             sent = next(((s, e) for (s, e) in spans if s <= pos < e), (0, len(text_low)))
             sentence = text_low[sent[0]:sent[1]]
-            if not _is_negated(sentence):
+            if not negated_span.get(sent, _is_negated(sentence)):
                 asserted_snippet = answer[sent[0]:sent[1]].strip()
                 break
             idx = pos + max(1, len(p))

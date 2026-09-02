@@ -72,6 +72,16 @@ Each run writes `results/<provider>-<date>.json` with per-question verdicts and
 the complete raw answers, so every verdict can be audited, and prints a
 scoreboard. A human-readable scoreboard lives in `results/RESULTS-<date>.md`.
 
+| Run | Model | Pass | Partial | Fail | Accuracy |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-13 | gemini-2.5-flash, grounded | 45 | 2 | 0 | 95.7% |
+| 2026-09-02 | gemini-2.5-flash, grounded | 45 | 2 | 0 | 95.7% |
+
+Both runs are graded under grader version 2026-09-02 (`regrade.py` re-derives
+any stored run under the current rules). The two partials are the same in both
+runs: the three-stone "past, present, future" meaning given without its
+advertising origin, and the fluorescence answer given without the GIA study.
+
 ## Honesty rules baked in
 
 - If a provider's quota runs out mid-run, the remaining questions are marked

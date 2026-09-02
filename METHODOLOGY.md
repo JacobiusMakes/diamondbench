@@ -119,3 +119,28 @@ missing slots, each asserted wrong claim with the offending sentence, the
 sourced correct answer, the complete raw model answer, and the grounding
 domains the model cited. Nothing is truncated. If you disagree with a verdict,
 the evidence to check it is already in the file.
+
+## Second-run calibration (v1.1, 2026-09-02)
+
+The second Gemini run (2026-09-02) was audited the same way. The first scoring
+pass reported 85.1%; five of its seven misses were grader misfires, and the
+rules changed in three places:
+
+- **Assertion-form keys.** A `must_not_include` phrase must be the assertion
+  itself, never a bare noun phrase that also appears in true sentences. The
+  bare "completely flawless" (which matched "completely flawless diamonds are
+  rare") became "are completely flawless".
+- **List items inherit their lead-in's negation.** Answers often put the wrong
+  things under a heading such as "What to avoid:" followed by bullets. The
+  sentence splitter treats each bullet as its own sentence, so the bullet
+  "bleach" carried no negation of its own. A bulleted or numbered line now
+  inherits negation from the whole block of prose between the previous list
+  and itself. "steer clear" joined the negation markers.
+- **Three synonym slots widened** for correct answers in different words:
+  "does not tell you" (thermal tester), "no universal rule" and "marketing
+  strategy" (months' salary), "all your fingers" and "isn't one special vein"
+  (vena amoris).
+
+Every change was re-applied to the July run with `regrade.py`; its score did
+not move (45 pass / 2 partial / 0 fail), which is the check that a rule change
+is a correction and not a loosening. Grader version string: 2026-09-02.

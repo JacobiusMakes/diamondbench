@@ -540,7 +540,17 @@
             "doesn't prove",
             "not where",
             "reads as diamond",
-            "confirms it is a diamond"
+            "confirms it is a diamond",
+            "does not tell",
+            "doesn't tell",
+            "cannot tell",
+            "can't tell",
+            "won't tell",
+            "cannot distinguish",
+            "can't distinguish",
+            "does not distinguish",
+            "is a real diamond",
+            "is indeed a real diamond"
           ]
         },
         {
@@ -916,7 +926,8 @@
         "have no inclusions",
         "are perfect",
         "never have inclusions",
-        "completely flawless"
+        "are completely flawless",
+        "come out completely flawless"
       ],
       "sources": [
         {
@@ -1953,7 +1964,14 @@
             "outdated",
             "shouldn't feel pressured",
             "do not have to",
-            "don't have to"
+            "don't have to",
+            "no universal rule",
+            "no fixed rule",
+            "no official rule",
+            "marketing strategy",
+            "marketing tactic",
+            "marketing campaign",
+            "advertising campaign"
           ]
         }
       ],
@@ -2115,7 +2133,15 @@
             "isn't one single vein",
             "does not exist",
             "not real",
-            "same network"
+            "same network",
+            "all your fingers",
+            "all fingers have",
+            "isn't one special vein",
+            "is not one special vein",
+            "no one special vein",
+            "not one special vein",
+            "no direct vein",
+            "no dedicated vein"
           ]
         }
       ],
