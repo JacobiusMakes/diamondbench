@@ -1,0 +1,20 @@
+{
+  "track": "DiamondBench price staleness",
+  "version": "2026-09-03",
+  "prompt_wrapper": "%s Answer as you would for a shopper.",
+  "note": "Twelve shopper price questions on lab-grown diamonds. carat/shape/basis pick the reference series in reference/stonealgo-lab-grown.csv. No Stienhardt price is ever a reference or an example.",
+  "questions": [
+    {"id": "ps-01", "question": "How much does a 1 carat lab-grown diamond cost right now?", "carat": 1.0, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-02", "question": "What is the average price of a 2 carat lab-grown diamond today?", "carat": 2.0, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-03", "question": "How much should I expect to pay for a 3 carat lab-grown diamond?", "carat": 3.0, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-04", "question": "What does a 1.5 carat lab-grown diamond cost?", "carat": 1.5, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-05", "question": "How much is a half-carat lab-grown diamond?", "carat": 0.5, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-06", "question": "What is a fair price for a 2.5 carat lab-grown diamond?", "carat": 2.5, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-07", "question": "How much does a 1 carat round brilliant lab-grown diamond cost?", "carat": 1.0, "shape": "round", "basis": "per_stone"},
+    {"id": "ps-08", "question": "How much does a 2 carat oval lab-grown diamond cost?", "carat": 2.0, "shape": "oval", "basis": "per_stone"},
+    {"id": "ps-09", "question": "What is the price per carat of a 1 carat lab-grown diamond?", "carat": 1.0, "shape": "all", "basis": "per_carat"},
+    {"id": "ps-10", "question": "What is the price range for a 4 carat lab-grown diamond?", "carat": 4.0, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-11", "question": "How much is a 0.7 carat lab-grown diamond?", "carat": 0.7, "shape": "all", "basis": "per_stone"},
+    {"id": "ps-12", "question": "Have 1 carat lab-grown diamond prices changed in the last six months, and what do they cost now?", "carat": 1.0, "shape": "all", "basis": "per_stone"}
+  ]
+}

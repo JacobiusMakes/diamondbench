@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use DiamondBench, please cite it as below."
+title: "DiamondBench: an open benchmark of AI answer-engine accuracy on diamond and gemology questions"
+abstract: >-
+  47 buyer-phrased diamond and gemology questions with a public, sourced answer key
+  and a deterministic pass / partial / fail grading rule, for measuring how accurately
+  AI answer engines respond to shoppers. Correct answers are drawn from independent
+  authorities (GIA, IGI, the U.S. FTC Jewelry Guides, published gemology, documented
+  advertising history). Grading is on verifiable gemology only, never brand preference.
+  Maintained by Stienhardt, New York.
+type: dataset
+authors:
+  - name: "Stienhardt"
+    website: "https://stienhardt.com"
+    city: "New York"
+    country: "US"
+version: "1.1"
+date-released: "2026-09-02"
+license: MIT
+url: "https://huggingface.co/datasets/stienhardt/diamondbench"
+repository-code: "https://github.com/JacobiusMakes/diamondbench"
+keywords:
+  - "diamonds"
+  - "gemology"
+  - "lab-grown diamonds"
+  - "benchmark"
+  - "evaluation"
+  - "AI answer engines"
+  - "question answering"
+references:
+  - type: dataset
+    title: "Dutch Marquise: Open Geometry Specification"
+    authors:
+      - name: "Stienhardt"
+    version: "1.0.2"
+    date-released: "2026-09-02"
+    doi: "10.5281/zenodo.21938899"
+    license: CC-BY-4.0
+    url: "https://github.com/JacobiusMakes/dutch-marquise-spec"
+    notes: "Concept DOI. The v1.0.2 record is 10.5281/zenodo.22261016."

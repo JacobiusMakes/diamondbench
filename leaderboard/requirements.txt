@@ -1,0 +1,3 @@
+# Only the leaderboard needs a dependency. bench.py, regrade.py, and the harness metric
+# stay standard-library only.
+gradio>=4.44

@@ -1,0 +1,63 @@
+# DiamondBench as an EleutherAI lm-evaluation-harness task.
+#
+# Run from the repository root (the metric file sits next to this YAML and imports
+# ../bench.py when it can find it, otherwise it uses its embedded copy of the grader):
+#
+#   lm_eval --model hf \
+#       --model_args pretrained=<hub-model-id> \
+#       --tasks diamondbench \
+#       --include_path ./harness \
+#       --apply_chat_template \
+#       --output_path results/lm_eval \
+#       --log_samples
+#
+# See harness/README.md for the comparability caveat: a harness run measures a model's
+# parametric knowledge with no web grounding, which is a different thing from the
+# grounded answer-engine runs in results/.
+task: diamondbench
+tag:
+  - diamondbench
+# Hub id. Fallback if the organization id is unavailable: JacobiusMakes/diamondbench
+dataset_path: stienhardt/diamondbench
+dataset_name: null
+# The Hub dataset is a single questions.jsonl, which the datasets library exposes as
+# the "train" split. Nothing is trained on it; it is the evaluation set.
+test_split: train
+output_type: generate_until
+num_fewshot: 0
+# Mirrors bench.py's PROMPT exactly ("%s Answer as you would for a shopper."), so a
+# harness run asks the same question as a bench.py run.
+doc_to_text: "{{question}} Answer as you would for a shopper."
+doc_to_target: "{{correct_answer}}"
+process_results: !function diamondbench_metric.process_results
+generation_kwargs:
+  # If "until" is omitted the harness stops generation at the fewshot delimiter, a
+  # blank line, which would truncate a multi-paragraph answer before grading. These
+  # end-of-text markers keep the full answer.
+  until:
+    - "</s>"
+    - "<|im_end|>"
+    - "<|endoftext|>"
+    - "<|eot_id|>"
+  max_gen_toks: 1024
+  do_sample: false
+  temperature: 0.0
+metric_list:
+  # accuracy = share of questions that fully pass (the headline number in results/).
+  - metric: accuracy
+    aggregation: mean
+    higher_is_better: true
+  - metric: pass
+    aggregation: mean
+    higher_is_better: true
+  # partial = incomplete, nothing wrong asserted. fail = a wrong claim was asserted.
+  - metric: partial
+    aggregation: mean
+    higher_is_better: false
+  - metric: fail
+    aggregation: mean
+    higher_is_better: false
+metadata:
+  version: 1.0
+  grader_version: "2026-09-02"
+  answer_key_version: "1.1"
