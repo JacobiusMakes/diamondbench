@@ -103,3 +103,12 @@ MIT. See LICENSE. Copyright (c) 2026 Stienhardt & Stones.
 - [dutch-marquise-spec](https://github.com/JacobiusMakes/dutch-marquise-spec): the open geometry standard. DOI: [10.5281/zenodo.21938900](https://doi.org/10.5281/zenodo.21938900)
 - [DiamondBench](https://github.com/JacobiusMakes/diamondbench): open benchmark of AI answer-engine accuracy on diamond questions
 - [Diamond & Gemology Encyclopedia](https://huggingface.co/datasets/JacobiusMakes/diamond-gemology-encyclopedia): the encyclopedia as a Hugging Face dataset
+
+## Related open data from Stienhardt
+
+* [lgd-import-monitor](https://github.com/JacobiusMakes/lgd-import-monitor): monthly official US
+  import statistics for cut lab-grown diamonds.
+* [agent-shoppable-census](https://github.com/JacobiusMakes/agent-shoppable-census): which US ring
+  sellers an AI agent can actually shop.
+* [dutch-marquise-spec](https://github.com/JacobiusMakes/dutch-marquise-spec): the open geometry
+  specification for the Dutch Marquise cut (DOI 10.5281/zenodo.21938899).
