@@ -39,8 +39,7 @@ Notes on that command:
 - `generation_kwargs.until` is set to end-of-text markers on purpose. If it were left out
   the harness would stop at a blank line (its fewshot delimiter) and grade a truncated
   answer.
-- Dataset id: `stienhardt/diamondbench`, with `JacobiusMakes/diamondbench` as the
-  fallback if the organization id is unavailable; change `dataset_path` if so.
+- Dataset id: `JacobiusMakes/diamondbench`.
 - Any other lm-eval backend works the same way (for example
   `--model openai-chat-completions --model_args model=<model>` or
   `--model anthropic-chat --model_args model=<model>`); only `--model` and

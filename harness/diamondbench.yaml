@@ -17,8 +17,8 @@
 task: diamondbench
 tag:
   - diamondbench
-# Hub id. Fallback if the organization id is unavailable: JacobiusMakes/diamondbench
-dataset_path: stienhardt/diamondbench
+# Public Hub dataset.
+dataset_path: JacobiusMakes/diamondbench
 dataset_name: null
 # The Hub dataset is a single questions.jsonl, which the datasets library exposes as
 # the "train" split. Nothing is trained on it; it is the evaluation set.
