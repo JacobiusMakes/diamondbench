@@ -1,7 +1,7 @@
 # DiamondBench
 
 An open, honest benchmark of how accurately AI answer engines respond to diamond
-and gemology questions. Maintained by [Stienhardt & Stones](https://stienhardt.com).
+and gemology questions. Maintained by [Stienhardt & Stones](https://stienhardt.com/?utm_source=github&utm_medium=benchmark_repository&utm_campaign=diamondbench).
 
 ## Why this exists
 

@@ -13,6 +13,8 @@ tags:
 - lab-grown-diamonds
 - benchmark
 - evaluation
+- ai-evaluation
+- question-answering-benchmark
 configs:
 - config_name: default
   data_files: questions.jsonl
@@ -22,16 +24,14 @@ configs:
 
 47 buyer-phrased diamond and gemology questions, each with a public, sourced answer
 key and a deterministic grading rule, for measuring how accurately AI answer engines
-respond before a shopper spends real money. Maintained by [Stienhardt](https://stienhardt.com),
+respond before a shopper spends real money. Maintained by [Stienhardt & Stones](https://stienhardt.com/?utm_source=huggingface&utm_medium=benchmark_dataset&utm_campaign=diamondbench),
 a New York lab-grown diamond jeweler. The runner, the grader, every raw model answer,
 and the dated scoreboards live in the
 [DiamondBench repository](https://github.com/JacobiusMakes/diamondbench) (MIT).
 
-Hub id: `stienhardt/diamondbench`. If that organization id is not available at upload
-time, the dataset is published as `JacobiusMakes/diamondbench` (the account that already
-hosts the companion
+Live Hub id: `JacobiusMakes/diamondbench`, the account that also hosts the companion
 [diamond-gemology-encyclopedia](https://huggingface.co/datasets/JacobiusMakes/diamond-gemology-encyclopedia)
-dataset) and this card is updated to say which id is live.
+dataset.
 
 ## What it measures
 
@@ -190,7 +190,7 @@ Load the questions:
 
 ```python
 from datasets import load_dataset
-ds = load_dataset("stienhardt/diamondbench")   # or JacobiusMakes/diamondbench
+ds = load_dataset("JacobiusMakes/diamondbench")
 row = ds["train"][0]
 print(row["question"], row["correct_answer"])
 ```
