@@ -72,6 +72,9 @@ Each run writes `results/<provider>-<date>.json` with per-question verdicts and
 the complete raw answers, so every verdict can be audited, and prints a
 scoreboard. A human-readable scoreboard lives in `results/RESULTS-<date>.md`.
 
+The fixed v1.1 dataset, results, citation metadata, and checksums are available
+from the [v1.1 release](https://github.com/JacobiusMakes/diamondbench/releases/tag/v1.1).
+
 | Run | Model | Pass | Partial | Fail | Accuracy |
 | --- | --- | --- | --- | --- | --- |
 | 2026-07-13 | gemini-2.5-flash, grounded | 45 | 2 | 0 | 95.7% |
