@@ -24,7 +24,7 @@ configs:
 
 47 buyer-phrased diamond and gemology questions, each with a public, sourced answer
 key and a deterministic grading rule, for measuring how accurately AI answer engines
-respond before a shopper spends real money. Maintained by [Stienhardt & Stones](https://stienhardt.com/?utm_source=huggingface&utm_medium=benchmark_dataset&utm_campaign=diamondbench),
+respond before a shopper spends real money. Maintained by [Stienhardt](https://stienhardt.com/?utm_source=huggingface&utm_medium=benchmark_dataset&utm_campaign=diamondbench),
 a New York lab-grown diamond jeweler. The runner, the grader, every raw model answer,
 and the dated scoreboards live in the
 [DiamondBench repository](https://github.com/JacobiusMakes/diamondbench) (MIT).

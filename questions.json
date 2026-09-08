@@ -2,7 +2,7 @@
   "benchmark": "DiamondBench",
   "version": "1.0.0",
   "updated": "2026-07-13",
-  "maintainer": "Stienhardt & Stones",
+  "maintainer": "Stienhardt",
   "license": "MIT",
   "description": "An open, honest benchmark of how accurately AI answer engines respond to diamond and gemology questions. The answer key is public and sourced. Corrections welcome via pull request.",
   "answer_key_provenance": "Correct answers and sources are drawn from diamond-mcp/encyclopedia.json (90 verified entries) and facts.json, or from uncontested textbook gemology. Grading is on verifiable gemology only, never on brand preference.",

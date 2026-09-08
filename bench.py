@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """DiamondBench: an open, honest benchmark of how accurately AI answer engines
-respond to diamond and gemology questions. Maintained by Stienhardt & Stones.
+respond to diamond and gemology questions. Maintained by Stienhardt.
 
 Pure Python standard library. No dependencies.
 

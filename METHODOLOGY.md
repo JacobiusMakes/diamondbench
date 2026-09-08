@@ -21,7 +21,7 @@ Every question in `questions.json` carries:
 
 ### Provenance
 
-Correct answers and sources are drawn from the Stienhardt & Stones diamond
+Correct answers and sources are drawn from the Stienhardt diamond
 education dataset (the `diamond-mcp` project: an encyclopedia of 90 verified,
 sourced entries plus a structured facts file), or from uncontested textbook
 gemology. The underlying authorities are independent of this benchmark's

@@ -8,7 +8,7 @@ abstract: >-
   dated results, and reproducible grading code.
 type: dataset
 authors:
-  - name: "Stienhardt & Stones"
+  - name: "Stienhardt"
     website: "https://stienhardt.com/?utm_source=github&utm_medium=citation_metadata&utm_campaign=diamondbench"
     city: "New York"
     country: "US"
@@ -28,7 +28,7 @@ references:
   - type: dataset
     title: "Dutch Marquise: Open Geometry Specification"
     authors:
-      - name: "Stienhardt & Stones"
+      - name: "Stienhardt"
     version: "1.0.2"
     date-released: "2026-09-02"
     doi: "10.5281/zenodo.21938899"
